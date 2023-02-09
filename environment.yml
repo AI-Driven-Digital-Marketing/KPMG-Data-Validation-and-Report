@@ -1,9 +1,10 @@
 name: STEnv
 dependencies:
   - pip
+  - pandas-profiling
   - numpy
   - pandas
   - matplotlib
   - seaborn
-  - streamlit_pandas_profiling
+  - streamlit-pandas-profiling
   - openpyxl
