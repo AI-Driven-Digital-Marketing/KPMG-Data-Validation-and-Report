@@ -1,0 +1,8 @@
+name: STEnv
+dependencies:
+  - numpy
+  - pandas
+  - matplotlib
+  - seaborn
+  - streamlit_pandas_profiling
+  - openpyxl
