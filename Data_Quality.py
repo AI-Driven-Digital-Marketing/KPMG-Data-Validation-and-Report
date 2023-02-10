@@ -15,11 +15,11 @@ tab1, tab2, tab3, tab4, tab5 = st.tabs(["Transaction", "New Customer", "Customer
 
 progress_text = "Operation in progress. Please wait."
 my_bar = st.progress(0, text=progress_text)
-
 for percent_complete in range(100):
     time.sleep(0.1)
     my_bar.progress(percent_complete + 1, text=progress_text)
-st.success('Your DataOverview Report is Completed', icon="✅")
+    
+
 
 
 @st.cache_resource 
