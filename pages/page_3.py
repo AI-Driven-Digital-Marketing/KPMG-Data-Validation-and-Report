@@ -2,9 +2,13 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
-st.markdown("# Page 3 🎉")
+st.markdown("#  3 🎉")
 st.sidebar.markdown("Page 3 🎉")
 import streamlit as st
+
+st.camera_input(
+  'Create your mugshot for your own Report'
+)
 
 # Add a selectbox to the sidebar:
 add_selectbox = st.sidebar.selectbox(
@@ -17,6 +21,7 @@ add_slider = st.sidebar.slider(
     'Select a range of values',
     0.0, 100.0, (25.0, 75.0)
 )
+
 
 @st.experimental_memo
 def load_data(url):
