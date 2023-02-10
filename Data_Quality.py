@@ -47,7 +47,7 @@ with tab4:
     
 with tab5:
     '''
-    Takeaway & Insights
+    ### Takeaway & Insights
     1. **Data accuracy:**
     Inconsistencies and inaccuracies in the data. For data birth, a lot of record has date of birth Over 120 years old and the max one even have 174 years old.
     It seems that this table have long time historical data which is updated with time goes by, but without check the death situation.
