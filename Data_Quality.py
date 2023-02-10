@@ -51,7 +51,8 @@ with tab5:
     1. **Data accuracy:**
     Inconsistencies and inaccuracies in the data. For data birth, a lot of record has date of birth Over 120 years old and the max one even have 174 years old.
     It seems that this table have long time historical data which is updated with time goes by, but without check the death situation.
-    2.**Data completeness:** Some column in the dataset where contains null values.(It seems need data cleaning)
+    2. **Data completeness:** Some column in the dataset where contains null values.(It seems need data cleaning)
+    
     3. **Data consistency:** Some tables have incorrect data types, for this demographic table, the DOB should be timestamp, but the checkresult shows that it contain some non-numeric value.(We need conduct some data cleaning and data type transformation before do visualization and ml)
     4. **Data timelines:** transaction dataset seems good, and it has no problems with data currency.
     5. **Data validity:** Some data points in the dataset are invalid, for example, one record in date of
