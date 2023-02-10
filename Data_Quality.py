@@ -77,3 +77,11 @@ with tab5:
     st.write('- Cross-Checking Procedures: Implementing cross-referencing techniques between different data fields.')
     st.write('- Consistent Naming Conventions: Setting clear guidelines for naming data fields across the organization.')
     st.write('- Data Validation: Implementing checks to verify the accuracy of specific data types in designated columns.')
+    
+
+
+st.download_button(
+  'Download  Report',
+  data='This is some text',
+  help='Click  to get you own  insights!'
+)
