@@ -11,8 +11,12 @@ from streamlit_pandas_profiling import st_profile_report
 #Layout layer
 
 st.markdown("# KPMG Data Analysis System")
+st.markdown("## Data Overview")
 # st.sidebar.markdown("#Page 1")
 st.write('Data Overview')
+
+#Widget layer
+
 
 Transactions = pd.read_excel('KPMG_VI_New_raw_data_update_final.xlsx',sheet_name= 'Transactions')
 Transactions.columns = Transactions.iloc[0,:]
