@@ -44,6 +44,20 @@ with tab3:
 with tab4:
     profile = profiling_transaction('CustomerAddress')
     st_profile_report(profile) 
+    '''
+    Takeaway & Insights
+    1. **Data accuracy:**
+    Inconsistencies and inaccuracies in the data. For data birth, a lot of record has date of birth Over 120 years old and the max one even have 174 years old.
+    It seems that this table have long time historical data which is updated with time goes by, but without check the death situation.
+    2.**Data completeness:** Some column in the dataset where contains null values.(It seems need data cleaning)
+    3. **Data consistency:** Some tables have incorrect data types, for this demographic table, the DOB should be timestamp, but the checkresult shows that it contain some non-numeric value.(We need conduct some data cleaning and data type transformation before do visualization and ml)
+    4. **Data timelines:** transaction dataset seems good, and it has no problems with data currency.
+    5. **Data validity:** Some data points in the dataset are invalid, for example, one record in date of
+    birth in the Customer Demographic sheet making them 174 years old, which is not be used, need go back to data source.
+    6. **Data uniqueness:** By conduct quality checking, we could not find any duplicate data in the dataset.
+        '''
+
+    
     st.write('### Suggestions')
     st.write('- Regular Data Audits: Conducting periodic assessments to eliminate invalid data and ensure the uniqueness of the information.')
     st.write('- Clear Data Collection Guidelines: Establishing explicit protocols for collecting data.')
