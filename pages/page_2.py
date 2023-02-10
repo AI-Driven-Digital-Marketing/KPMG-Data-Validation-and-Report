@@ -80,6 +80,7 @@ cols = ['brand','online_sold','offline_sold']
 brand_online_vs_offline = brand_online_sold.merge(brand_offline_sold,how='inner',on = 'index').set_axis(cols,axis=1)
 st.dataframe(brand_online_vs_offline)
 
+st.write('For all the brands, online proportion and offline are closed, which proves the importance of off line store in Bike market.')
 
 #---------------Bing Online vs Brand End -------------------------------
 
