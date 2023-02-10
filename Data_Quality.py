@@ -44,3 +44,9 @@ with tab3:
 with tab4:
     profile = profiling_transaction('CustomerAddress')
     st_profile_report(profile) 
+    st.write('### Suggestions')
+    st.write('- Regular Data Audits: Conducting periodic assessments to eliminate invalid data and ensure the uniqueness of the information.')
+    st.write('- Clear Data Collection Guidelines: Establishing explicit protocols for collecting data.')
+    st.write('- Cross-Checking Procedures: Implementing cross-referencing techniques between different data fields.')
+    st.write('- Consistent Naming Conventions: Setting clear guidelines for naming data fields across the organization.')
+    st.write('- Data Validation: Implementing checks to verify the accuracy of specific data types in designated columns.')
