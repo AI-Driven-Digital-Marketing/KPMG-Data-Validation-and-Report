@@ -13,6 +13,7 @@ st.markdown("# Data Quality Check")
 st.sidebar.markdown("# Data Quality Check")
 tab1, tab2, tab3, tab4, tab5 = st.tabs(["Transaction", "New Customer", "Customer Demo", 'CustomerAddress', 'Takeaways'])
 
+st.success('Your DataOverview Report is successed', icon="✅")
 @st.cache_resource 
 def profiling_transaction(sheet):
     df = pd.read_excel('KPMG_VI_New_raw_data_update_final.xlsx',sheet_name= sheet)
