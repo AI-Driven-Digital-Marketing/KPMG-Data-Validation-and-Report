@@ -2,8 +2,8 @@ import streamlit as st
 import pandas as pd
 from datetime import datetime
 import matplotlib.pyplot as plt
-st.markdown("# Page 2 ❄️")
-st.sidebar.markdown("Page 2")
+st.markdown("# Insights")
+st.sidebar.markdown("Insights")
 
 Transactions = pd.read_excel('KPMG_VI_New_raw_data_update_final.xlsx',sheet_name= 'Transactions')
 Transactions.columns = Transactions.iloc[0,:]
@@ -13,6 +13,7 @@ Transactions.product_first_sold_date = Transactions.product_first_sold_date.appl
 Transactions.transaction_date = Transactions.transaction_date.astype('string')
 Transactions['transaction_month'] = Transactions.transaction_date.apply(lambda x: x[5:7])
 # brand count
+st.write('## Brand analysis')
 st.write('- Each brand has different marketing strategy and target populations, their sales statistics are hence different.')
 st.write('- Understanding these difference is important when organizing any business activities.')
 
@@ -41,6 +42,8 @@ Cutomer_brand['list_price_avg'] = Cutomer_brand['list_price'] / Cutomer_brand['b
 Cutomer_brand['profit_avg'] = Cutomer_brand['profit'] / Cutomer_brand['bill_count']
 Cutomer_brand['profit_rate'] = 1- Cutomer_brand['standard_cost']/Cutomer_brand['list_price']
 Cutomer_brand = Cutomer_brand.merge(CustomerAddress[['customer_id', 'property_valuation']], on = 'customer_id')
+st.write('## Customer analysis')
+Cutomer_brand
 st.write('- Pay closely attention to customer purchase frequency as we want to keep our customers and expand their consumptions.')
 fig, ax = plt.subplots(figsize = (10,6))
 Cutomer_brand.hist(['bill_count'] , ax = ax)
