@@ -17,6 +17,8 @@ st.write('## Brand analysis')
 st.write('- Each brand has different marketing strategy and target populations, their sales statistics are hence different.')
 st.write('- Understanding these difference is important when organizing any business activities.')
 
+
+
 Tran_counts = Transactions.groupby(['brand'],as_index=False)['list_price'].count()
 Tran_counts.columns = ['brand', 'count']
 # brand revenue
