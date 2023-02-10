@@ -11,7 +11,7 @@ from streamlit_pandas_profiling import st_profile_report
 #Layout layer
 
 st.markdown("# KPMG Data Analysis System")
-# st.markdown("## Data Overview")
+st.markdown("## Data Overview")
 # st.sidebar.markdown("#Page 1")
 st.write('Data Overview')
 
