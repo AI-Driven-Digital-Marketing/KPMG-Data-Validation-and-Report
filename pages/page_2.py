@@ -57,3 +57,9 @@ Cutomer_brand.plot.scatter(['list_price_avg'], ['profit_avg'],
 ax1.set_title('')
 st.title('Price versus Profit')
 st.pyplot(fig1)
+import streamlit as st
+
+st.text_area(
+  'Takeaway：',
+  'This is what I really wanted to say'
+)
