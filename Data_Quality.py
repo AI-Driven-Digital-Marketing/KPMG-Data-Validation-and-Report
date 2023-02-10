@@ -11,7 +11,7 @@ from streamlit_pandas_profiling import st_profile_report
 
 st.markdown("# Data Quality Check")
 st.sidebar.markdown("# Data Quality Check")
-tab1, tab2, tab3, tab4 = st.tabs(["Transaction", "New Customer", "Customer Demo", 'CustomerAddress'])
+tab1, tab2, tab3, tab4, tab5 = st.tabs(["Transaction", "New Customer", "Customer Demo", 'CustomerAddress', 'Takeaways'])
 
 @st.cache_resource 
 def profiling_transaction(sheet):
@@ -44,6 +44,8 @@ with tab3:
 with tab4:
     profile = profiling_transaction('CustomerAddress')
     st_profile_report(profile) 
+    
+with tab5:
     '''
     Takeaway & Insights
     1. **Data accuracy:**
