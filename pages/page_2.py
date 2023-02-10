@@ -16,11 +16,11 @@ Transactions['transaction_month'] = Transactions.transaction_date.apply(lambda x
 st.write('- Each brand has different marketing strategy and target populations, their sales statistics are hence different.')
 st.write('- Understanding these difference is important when organizing any business activities.')
 st.write('### Suggestions')
-st.write('- Regular Data Audits: Conducting periodic assessments to eliminate invalid data and ensure the uniqueness of the information.
-- Clear Data Collection Guidelines: Establishing explicit protocols for collecting data.
-- Cross-Checking Procedures: Implementing cross-referencing techniques between different data fields.
-- Consistent Naming Conventions: Setting clear guidelines for naming data fields across the organization.
-- Data Validation: Implementing checks to verify the accuracy of specific data types in designated columns.')
+st.write('- Regular Data Audits: Conducting periodic assessments to eliminate invalid data and ensure the uniqueness of the information.')
+st.write('- Clear Data Collection Guidelines: Establishing explicit protocols for collecting data.')
+st.write('- Cross-Checking Procedures: Implementing cross-referencing techniques between different data fields.')
+st.write('- Consistent Naming Conventions: Setting clear guidelines for naming data fields across the organization.')
+st.write('- Data Validation: Implementing checks to verify the accuracy of specific data types in designated columns.')
 
 
 Tran_counts = Transactions.groupby(['brand'],as_index=False)['list_price'].count()
