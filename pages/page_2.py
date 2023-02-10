@@ -25,7 +25,7 @@ Tran_brand = Tran_brand.merge(Tran_counts, on = ['brand'])
 Tran_brand['list_price_avg'] = Tran_brand['list_price'] / Tran_brand['count']
 Tran_brand['profit_avg'] = Tran_brand['profit'] / Tran_brand['count']
 Tran_brand['profit_rate'] = 1- Tran_brand['standard_cost']/Tran_brand['list_price']
-Tran_brand
+st.dataframe(Tran_brand.style.highlight_max(axis=0, color = 'lightblue'))
 
 # Customer payment count
 CustomerAddress = pd.read_excel('KPMG_VI_New_raw_data_update_final.xlsx',sheet_name= 'CustomerAddress')
@@ -43,7 +43,7 @@ Cutomer_brand['profit_rate'] = 1- Cutomer_brand['standard_cost']/Cutomer_brand['
 Cutomer_brand = Cutomer_brand.merge(CustomerAddress[['customer_id', 'property_valuation']], on = 'customer_id')
 st.write('- Pay closely attention to customer purchase frequency as we want to keep our customers and expand their consumptions.')
 fig, ax = plt.subplots(figsize = (10,6))
-Cutomer_brand.hist(['bill_count'] , ax =ax)
+Cutomer_brand.hist(['bill_count'] , ax = ax)
 ax.set_title('')
 st.title('Purchase Frequency Counts')
 st.pyplot(fig)
