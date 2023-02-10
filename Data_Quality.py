@@ -10,8 +10,7 @@ from streamlit_pandas_profiling import st_profile_report
 
 
 st.markdown("# Data Quality Check")
-st.sidebar.markdown("Data Quality Check")
-st.write('KPMG Transaction Data Explore')
+st.sidebar.markdown("# Data Quality Check")
 tab1, tab2, tab3, tab4 = st.tabs(["Transaction", "New Customer", "Customer Demo", 'CustomerAddress'])
 
 @st.cache_resource 
