@@ -18,6 +18,14 @@ tab1, tab2, tab3, tab4, tab5 = st.tabs(["Transaction", "New Customer", "Customer
 # for percent_complete in range(100):
 #     time.sleep(0.1)
 #     my_bar.progress(percent_complete + 1, text=progress_text)
+
+with st.sidebar:
+    with st.echo():
+        st.write("This code will be printed to the sidebar.")
+
+    with st.spinner("Loading..."):
+        time.sleep(5)
+    st.success("Done!")
     
 st.success('Your DataOverview Report is Completed', icon="✅")
 
