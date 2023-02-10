@@ -8,9 +8,10 @@ from pandas_profiling import ProfileReport
 from pandas_profiling.utils.cache import cache_zipped_file
 from streamlit_pandas_profiling import st_profile_report
 
+#Layout layer
 
 st.markdown("# KPMG Data Analysis System")
-st.sidebar.markdown("# 1111Page 1")
+# st.sidebar.markdown("#Page 1")
 st.write('Data Overview')
 
 Transactions = pd.read_excel('KPMG_VI_New_raw_data_update_final.xlsx',sheet_name= 'Transactions')
