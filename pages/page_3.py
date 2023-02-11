@@ -16,8 +16,8 @@ add_selectbox = st.sidebar.selectbox(
     ('Email', 'Home phone', 'Mobile phone')
 )
 
-st.sidebar.text_area(
-  'Leave you infomation on here!')
+st.sidebar.text_input('ContactInfo', 
+                      'Put your contact Info on here to get compelete report!!')
 
 # Add a slider to the sidebar:
 add_slider = st.sidebar.slider(
