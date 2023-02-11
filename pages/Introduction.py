@@ -57,7 +57,7 @@ with tab1:
     col1, col2 = st.columns(2,gap = "medium")
     with col1:
         '''
-        #### 1.KYC(Know your Customers):
+        #### 1.KYC (Know your Customers):
         1. What age group is best to target your business with?
         2. What user characteristics are most important for your business to focus on?
         3. Which users have the strongest spending power?
@@ -65,19 +65,18 @@ with tab1:
         '''
     with col2:
         '''
-        #### 2.KYB(Know your Business):  
+        #### 2.KYB (Know your Business):  
         1. What industry is the key account strategy area that your business needs to focus on？
         2. Where are the components and growth points of the company's business？
         3. Specify your brand's profitability and financial situation!
         4. How should your brand do product differentiation strategy in market share?
         '''
-
     '''
-    ---------
+    -------
     ### Solutions
     - KPMG helps you give solid data suggestions from multiple dimensions including customers, company status, and market analysis to help your business grow at a high speed.
     - Know your customer! Know your business! And Empower one-step solution to make **GROWTH & REVENUE**!
-    #### --- "You can be the DATA GROWTH HACKER FAST!!"
+    ####                                                       --- "You can be the DATA GROWTH HACKER FAST!!"
     '''    
 with tab3:
     
