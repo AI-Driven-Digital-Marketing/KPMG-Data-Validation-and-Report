@@ -44,12 +44,18 @@ with tab1:
        
        3. **Scalability and Security:** The platform is designed to be scalable and secure, ensuring that it can accommodate growing amounts of data and protect sensitive information.
        '''
-    
 with tab2:
+    st.markdown('## Solutions & Anticipations')
+    st.video('src/pexels-rostislav-uzunov-7385122.mp4')
+
+    '''
+    
+    '''    
+with tab3:
     
     col1, col2 = st.columns(2)
     with col1:
-       st.markdown('## Solutions & Anticipations')
+       st.markdown('## Build your Own Data Report！')
        '''
         1. **Deep understanding your data profile!**
             KYC,KYB and Know your data!
@@ -60,7 +66,7 @@ with tab2:
         3. **Powerful Analytics tools!**
            Analyze your data set in multiple dimensions and give you the most comprehensive advice！
            
-        4. **Intelligent Suggestion! **
+        4. **Intelligent Suggestion!**
             Intelligently provide valuable insights for your preprocessing procedure.
             
         5. **Visualization and Dashboard!**
@@ -73,13 +79,7 @@ with tab2:
        
 
 
-with tab3:
-    
-    st.video('src/pexels-rostislav-uzunov-7385122.mp4')
 
-    '''
-    Your personal Report is here
-    '''
 
 
 
