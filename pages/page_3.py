@@ -52,7 +52,7 @@ with tab2:
 
     with col2:
        st.title('Problems and Solutions')
-        '''
+       '''
         我们很牛逼
         1.提供
         2.提供b
@@ -66,7 +66,7 @@ with tab3:
         st.image("https://static.streamlit.io/examples/cat.jpg")
 
     with col2:
-         '''
+        '''
         Your personal Report is here
         '''
         st.image(mugshot, width=150)
