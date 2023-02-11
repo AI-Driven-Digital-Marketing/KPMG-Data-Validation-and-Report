@@ -4,10 +4,10 @@ from datetime import datetime
 import matplotlib.pyplot as plt
 import seaborn as sns
 #st.set_page_config(layout="wide")
-tab1, tab2 = st.tabs(["Insight", "Conclusion"])
+tab1, tab2, tab3 = st.tabs(["Company&Brand Insights", 'Customer Insights',"Conclusion"])
 with tab1:
-    st.markdown("# Insight")
-    st.sidebar.markdown("Insight")
+    st.markdown("# Company&Brand Insights")
+    st.sidebar.markdown("Company&Brand Insights")
 
     #Shit hole begin
     transactions = pd.read_excel('KPMG_VI_New_raw_data_update_final.xlsx',sheet_name='Transactions',header=1)
@@ -159,8 +159,10 @@ with tab1:
 
 
     #---------------Bing Rich Customer Industry Start -------------------------------
-
-    st.write('## Valuable Customers Industry Source')
+with tab2:
+    st.markdown("# Customers Insights")
+    st.sidebar.markdown("Customers Insights")
+    #st.write('## Valuable Customers Industry Source')
     Rich_Ind = Demographic[(Demographic['wealth_segment'] == 'Affluent Customer')|(Demographic['wealth_segment'] == 'High Net Worth')].groupby('job_industry_category').count().reset_index().iloc[:,0:2]
 
     labels = list(Rich_Ind['job_industry_category'])
@@ -221,8 +223,19 @@ with tab1:
     st.title('Price versus Profit')
     st.pyplot(fig1)
     st.write('- The deeper the color, the richer the customer. Hence, the property doesn\'t has direct impact to purchase')
-with tab2:
+with tab3:
     '''
-    - conclusion 1
-    - conclusion 2
+    ### Company&Brand
+    - WeareA2B has dedicated its efforts towards the medium and low classes, resulting in significant achievements.
+
+    - WeareA2B boasts a profit rate of 66.1%, the highest among its competitors. Despite having the highest average list price, the company's products also have the lowest cost, leading to its high profitability.
+
+    - OHM and Solex have established themselves as key players in the low-class market segment. Their product offerings and strategies are geared towards meeting the demands of consumers in this category, making them a popular choice for those seeking value for money. This strong focus on the low-class segment has proven successful for both companies, solidifying their position in this competitive market.
+
+    - Despite having a comparable market share, Giant and Nocro have underperformed in terms of profits. The main contributor to this issue is the combination of low list prices and high costs. To improve profitability, the companies are advised to explore cost-cutting measures within their supply chains.
+    ### Customers
+    - The majority of WeareA2B's customer base is individuals in middle age, around 40 years old, with a balanced representation of both male and female customers.
+    - The majority of  customers come from the Manufacturing, Financial Services, and Health industries, which suggests that these buyers may have a passion for mechanics or place a high value on a healthy lifestyle.
+    - The car ownership rate among customers is approximately 50%, which is lower compared to the 87% rate in Australia. Bikes could be a viable alternative for cars in specific areas.
+    - Upon analyzing the high-value customers, it is noted that their industries and car ownership rates are comparable. As such, these factors should not be heavily considered when developing marketing strategies.
     '''
