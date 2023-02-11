@@ -36,6 +36,7 @@ with tab1:
        st.image('src/IMG_5301 2.JPG')
 
     with col2:
+       st.markdown('## Why Us?')
        '''
        1. User-Friendly Interface: The platform features a user-friendly interface that allows users to easily visualize, manipulate, and explore their data, without requiring specialized technical skills.
 
@@ -48,11 +49,8 @@ with tab2:
     
     col1, col2 = st.columns(2)
     with col1:
-       st.image("https://static.streamlit.io/examples/cat.jpg")
-
-    with col2:
-       st.title('Problems and Solutions')
-       '''
+        st.markdown('Solutions & Anticipations')
+        '''
         - ** 1. Deep understanding your data profile: **
             KYC,KYB and Know your data!
             
@@ -68,6 +66,11 @@ with tab2:
         - **5. Visualization and Dashboard!**
             Quick, colorful, informative dashboard to let you aim your target users.
         '''
+
+    with col2:
+       st.image('src/IMG_5301 2.JPG')
+      
+
 
 with tab3:
     
