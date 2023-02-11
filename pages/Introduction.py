@@ -33,7 +33,7 @@ tab1, tab2, tab3 = st.tabs(["Why us?" , "Solutions & Anticipations", "About this
 with tab1:
     col1, col2 = st.columns(2,gap = "medium")
     with col1:
-       st.image('src/IMG_5301 2.JPG',width = 360)
+       st.image('src/IMG_5301 2.JPG',width = 370)
 
     with col2:
        st.markdown('## Why Us?')
@@ -68,7 +68,7 @@ with tab2:
         '''
 
     with col2:
-       st.image('src/IMG_5301 2.JPG',width = 360)
+       st.image('src/BIG-DATA.jpeg',width = 370)
       
 
 
