@@ -37,12 +37,12 @@ with tab1:
        st.image("https://static.streamlit.io/examples/cat.jpg")
 
     with col2:
-    '''
-    我们很牛逼
-    1.提供
-    2.提供b
-    3.提供c
-    '''
+        '''
+        我们很牛逼
+        1.提供
+        2.提供b
+        3.提供c
+        '''
     
 with tab2:
     
@@ -52,24 +52,24 @@ with tab2:
 
     with col2:
        st.title('Problems and Solutions')
-    '''
-    我们很牛逼
-    1.提供
-    2.提供b
-    3.提供
-    '''
+        '''
+        我们很牛逼
+        1.提供
+        2.提供b
+        3.提供
+        '''
 
 with tab3:
     
     col1, col2 = st.columns(2)
     with col1:
-     st.image("https://static.streamlit.io/examples/cat.jpg")
+        st.image("https://static.streamlit.io/examples/cat.jpg")
 
     with col2:
-     '''
-    Your personal Report is here
-    '''
-    st.image(mugshot, width=150)
+         '''
+        Your personal Report is here
+        '''
+        st.image(mugshot, width=150)
 
 
 
