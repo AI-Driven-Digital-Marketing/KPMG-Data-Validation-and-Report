@@ -49,10 +49,22 @@ with tab2:
     st.video('src/pexels-rostislav-uzunov-7385122.mp4')
 
     '''
-    - Is your business facing a Data swamp?
-    - Difficult to find insight from complex data, uncleaned data, and data that cannot provide real-time analysis?
+    ## Problems!
+    1. Is your business facing a Data swamp?
+    2. Difficult to find insight from complex data, uncleaned data, and data that cannot provide real-time analysis?
+    **KYC:**
+    1. What age group is best to target your business with?
+    2. What user characteristics are most important for your business to focus on?
+    3. Which users have the strongest spending power?
+    **KYB:**
+    1.What industry is the key account strategy area that your business needs to focus on？
+    2.Where are the components and growth points of the company's business？
+    3.Specify your brand's profitability and financial situation!
+    4.How should your brand do product differentiation strategy in market share?
+    ### Solutions
     - KPMG helps you give solid data suggestions from multiple dimensions including customers, company status, and market analysis to help your business grow at a high speed.
-    - ### --- "You can be the DATA GROWTH HACKER!"
+    - Know your customer! Know your business! And Empower one-step solution to make GROWTH & REVENUE!
+    #### --- "You can be the DATA GROWTH HACKER!"
     '''    
 with tab3:
     
