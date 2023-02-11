@@ -49,7 +49,7 @@ with tab2:
     
     col1, col2 = st.columns(2)
     with col1:
-        st.markdown('Solutions & Anticipations')
+       st.markdown('## Solutions & Anticipations')
         '''
         - ** 1. Deep understanding your data profile: **
             KYC,KYB and Know your data!
@@ -74,15 +74,12 @@ with tab2:
 
 with tab3:
     
-    col1, col2 = st.columns(2)
-    with col1:
-        st.image("https://static.streamlit.io/examples/cat.jpg")
+    st.image("https://static.streamlit.io/examples/cat.jpg")
 
-    with col2:
-        '''
-        Your personal Report is here
-        '''
-        st.image(mugshot, width=150)
+    '''
+    Your personal Report is here
+    '''
+    st.image(mugshot, width=150)
 
 
 
