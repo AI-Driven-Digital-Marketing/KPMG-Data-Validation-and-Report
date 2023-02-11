@@ -36,33 +36,55 @@ def profiling_transaction(sheet):
     profile = ProfileReport(
         df, title="Profile Report of the Transaction Sheet", explorative=True
     )
+    
     return profile
 
 with tab1:
     profile = profiling_transaction('Transactions')
     st_profile_report(profile)
+    st.download_button(
+      'Download  Report',
+      data=profile.to_html(),
+        file_name = 'Transactions.html',
+      help='Click  to get you own insights!'
+)
 
     
 with tab2:
     profile = profiling_transaction('NewCustomerList')
     st_profile_report(profile)    
+    st.download_button(
+      'Download  Report',
+      data=profile.to_html(),
+        file_name = 'NewCustomerList.html',
+      help='Click  to get you own insights!'
+)
     
 with tab3:
     profile = profiling_transaction('CustomerDemographic')
     st_profile_report(profile) 
-    
+    st.download_button(
+      'Download  Report',
+      data=profile.to_html(),
+        file_name = 'CustomerDemographic.html',
+      help='Click  to get you own insights!'
+)    
 with tab4:
     profile = profiling_transaction('CustomerAddress')
     st_profile_report(profile) 
-    
+    st.download_button(
+      'Download  Report',
+      data=profile.to_html(),
+        file_name = 'CustomerAddress.html',
+      help='Click  to get you own insights!'
+)       
 with tab5:
     '''
-    ### Takeaway & Insights
+    ### General Data Issue
     1. **Data accuracy:**
     Inconsistencies and inaccuracies in the data. For data birth, a lot of record has date of birth Over 120 years old and the max one even have 174 years old.
-    It seems that this table have long time historical data which is updated with time goes by, but without check the death situation.
-    2. **Data completeness:** Some column in the dataset where contains null values.(It seems need data cleaning)
-    
+    It seems that this table have long period historical data which is updated with time goes by, but without check the death situation.
+    2. **Data completeness:** Some column in the dataset contain null values.
     3. **Data consistency:** Some tables have incorrect data types, for this demographic table, the DOB should be timestamp, but the checkresult shows that it contain some non-numeric value.(We need conduct some data cleaning and data type transformation before do visualization and ml)
     4. **Data timelines:** transaction dataset seems good, and it has no problems with data currency.
     5. **Data validity:** Some data points in the dataset are invalid, for example, one record in date of
@@ -80,8 +102,3 @@ with tab5:
     
 
 
-st.download_button(
-  'Download  Report',
-  data='This is some text',
-  help='Click  to get you own  insights!'
-)
