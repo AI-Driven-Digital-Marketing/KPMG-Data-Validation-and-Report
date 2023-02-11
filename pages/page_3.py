@@ -26,7 +26,48 @@ add_slider = st.sidebar.slider(
     'Select a range of values',
     0.0, 100.0, (25.0, 75.0)
 )
+#####################Main page###
+st.markdown("# KPMG Data Analysis Platform")
+
+tab1, tab2, tab3 = st.tabs(["Why us?" , "Solutions & Anticipations", "About this Platform"])
+
+with tab1:
+    col1, col2 = st.columns(2)
+    with col1:
+       st.image("https://static.streamlit.io/examples/cat.jpg")
+
+    with col2:
+'''
+我们很牛逼
+1.提供
+2.提供b
+3.提供c
+'''
+    
+with tab2:
+    
+    col1, col2 = st.columns(2)
+    with col1:
+       st.image("https://static.streamlit.io/examples/cat.jpg")
+
+    with col2:
+       st.title('Problems and Solutions')
+'''
+我们很牛逼
+1.提供
+2.提供b
+3.提供
+'''
+
+with tab3:
+    
+'''
+Your personal Report is here
+'''
 st.image(mugshot, width=150)
+
+
+
 
 @st.experimental_memo
 def load_data(url):
