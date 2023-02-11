@@ -100,11 +100,12 @@ plt.pie(data, labels = labels, colors = colors, autopct='%.0f%%')
 plt.tight_layout()
 
 ax.set_title('')
-st.title('Brand Selling Proportion')
+st.write('## Brand Selling Proportion')
 st.pyplot(fig)
 
 #Insight
-st.write('- Brands are cutting market evenly. Solex is taking biggest cut with number of 21%, followed by Giant Bicycles and WeareA2B.')
+st.write('- Brands are cutting market evenly.')
+st.write('- Solex is taking biggest cut with number of 21%, followed by Giant Bicycles and WeareA2B with 17%')
 
 #---------------Bing End -----------------------------
 
@@ -120,7 +121,8 @@ cols = ['brand','online_sold','offline_sold']
 brand_online_vs_offline = brand_online_sold.merge(brand_offline_sold,how='inner',on = 'index').set_axis(cols,axis=1)
 st.dataframe(brand_online_vs_offline)
 
-st.write('For all the brands, online proportion and offline are closed, which proves the importance of off line store in Bike market.')
+st.write('- Online shopping proportion showing similar patterns. All taking around 50% proportions.')
+st.write('- Offline store is still taking a huge place under the impact of online shopping trend. Offline experience still cant fully replace by convinience.')
 
 #---------------Bing Online vs Brand End -------------------------------
 
@@ -145,9 +147,9 @@ fig, ax = plt.subplots(figsize = (10,6))
 sns.barplot(data = profit, x = 'brand',y = 'profit',hue='product_class',)
 plt.tight_layout()
 st.pyplot(fig)
-st.write('OHM and Solex have amazing profit on low class products.\
-\nTrek and Weare A2B mainly focus on medium class.\
-\nGiant and Nocro are not competitive in profits compared to their opposite. With similar share of markets, company is making much less revenue.')
+st.write('- OHM and Solex have amazing profit on low class products.')
+st.write('- Trek and Weare A2B have advantages on middle class products.')
+st.write('- Giant and Nocro are not competitive in profits compared to their opposite. With similar share of markets, company is making much less revenue.')
 
 
 
@@ -174,13 +176,15 @@ plt.pie(data, labels = labels, colors = colors, autopct='%.0f%%')
 plt.tight_layout()
 
 ax.set_title('')
-st.title('Valuable Customers in Industry')
+st.title('')
 st.pyplot(fig)
 
-st.write('Proportion of valuable customers is having similer pattern with all-customers industry pattern.\
-\n No strong evidence indicating that customers from certain areas having higher willingness to pay.')
+st.write('- Proportion of valuable customers is having similer pattern with all-customers industry pattern.')
+st.write('- No strong evidence indicating that customers from certain areas having higher willingness to pay.')
 
 #---------------Bing Rich Customer Industry End -------------------------------
+
+
 
 
 # Customer payment count
@@ -197,6 +201,10 @@ Cutomer_brand['list_price_avg'] = Cutomer_brand['list_price'] / Cutomer_brand['b
 Cutomer_brand['profit_avg'] = Cutomer_brand['profit'] / Cutomer_brand['bill_count']
 Cutomer_brand['profit_rate'] = 1- Cutomer_brand['standard_cost']/Cutomer_brand['list_price']
 Cutomer_brand = Cutomer_brand.merge(CustomerAddress[['customer_id', 'property_valuation']], on = 'customer_id')
+
+#Verbal
+st.write('')
+
 Cutomer_brand
 st.write('- Pay closely attention to customer purchase frequency as we want to keep our customers and expand their consumptions.')
 fig, ax = plt.subplots(figsize = (10,6))
@@ -204,9 +212,9 @@ Cutomer_brand.hist(['bill_count'] , ax = ax)
 ax.set_title('')
 ax.set_xlabel('Frequency')
 ax.set_ylabel('Customer counts')
-st.title('Purchase Frequency Counts')
+st.write('## Purchase Frequency Counts')
 st.pyplot(fig)
-st.write('- Most customers bought 5 products for this year.')
+st.write('- Most customers bought 5 products for this year. Probably indicating high user stickness')
 fig1, ax1 = plt.subplots(figsize = (10,6))
 Cutomer_brand.plot.scatter(['list_price_avg'], ['profit_avg'], 
                            figsize = (16,9),
