@@ -64,7 +64,7 @@ with tab1:
         3. Which users have the strongest spending power?
         4. Which customer segment has the highest customer value?
         
-        ------>
+        -------------- RUN Your Business ---------------->>>>
         '''
     with col2:
         '''
