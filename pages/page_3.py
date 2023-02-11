@@ -36,19 +36,7 @@ with tab1:
        st.image('src/IMG_5301 2.JPG')
 
     with col2:
-        '''
-- 1. Deep understanding your data profile: 
-    KYC,KYB and Know your data!
-- 2. Check your data Quality:
-    Ensure your data quality from 6 dimensions and not be deceived!
-- 3. Powerful Analytics tools:
-   Analyze your data set in multiple dimensions and give you the most comprehensive advice！
-- 4. Intelligent Suggestion: 
-    Intelligently provide valuable insights for your preprocessing procedure.
-- 5. Visualization and Dashboard!
-    Quick, colorful, informative dashboard to let you aim your target users.
 
-        '''
     
 with tab2:
     
@@ -58,11 +46,18 @@ with tab2:
 
     with col2:
        st.title('Problems and Solutions')
-       '''
-        我们很牛逼
-        1.提供
-        2.提供b
-        3.提供
+        '''
+- ** 1. Deep understanding your data profile: **
+    KYC,KYB and Know your data!
+- ** 2. Check your data Quality:**
+    Ensure your data quality from 6 dimensions and not be deceived!
+- ** 3. Powerful Analytics tools:**
+   Analyze your data set in multiple dimensions and give you the most comprehensive advice！
+- ** 4. Intelligent Suggestion: **
+    Intelligently provide valuable insights for your preprocessing procedure.
+- **5. Visualization and Dashboard!**
+    Quick, colorful, informative dashboard to let you aim your target users.
+
         '''
 
 with tab3:
