@@ -31,10 +31,10 @@ add_slider = st.sidebar.slider(
 tab1, tab2, tab3 = st.tabs(["Why us?" , "Solutions & Anticipations", "About this Platform"])
 
 with tab1:
-    col1, col2 = st.columns(2)
+    col1, col2 = st.columns(2,gap = "medium")
     with col1:
 #        image1 = Image.open('src/IMG_5301 2.JPG')
-       st.image('src/IMG_5301 2.JPG', gap = "medium")
+       st.image('src/IMG_5301 2.JPG')
 
     with col2:
         '''
