@@ -36,11 +36,11 @@ with tab1:
        st.image('src/IMG_5301 2.JPG')
 
     with col2:
-'''
-1. User-Friendly Interface: The platform features a user-friendly interface that allows users to easily visualize, manipulate, and explore their data, without requiring specialized technical skills.
+       '''
+       1. User-Friendly Interface: The platform features a user-friendly interface that allows users to easily visualize, manipulate, and explore their data, without requiring specialized technical skills.
 
-2. Advanced Analytics: The platform includes advanced analytics capabilities, such as machine learning algorithms, predictive modeling, and statistical analysis, allowing users to uncover insights and make data-driven decisions.
-'''
+       2. Advanced Analytics: The platform includes advanced analytics capabilities, such as machine learning algorithms, predictive modeling, and statistical analysis, allowing users to uncover insights and make data-driven decisions.
+       '''
     
 with tab2:
     
@@ -51,17 +51,16 @@ with tab2:
     with col2:
        st.title('Problems and Solutions')
         '''
-- ** 1. Deep understanding your data profile: **
-    KYC,KYB and Know your data!
-- ** 2. Check your data Quality:**
-    Ensure your data quality from 6 dimensions and not be deceived!
-- ** 3. Powerful Analytics tools:**
-   Analyze your data set in multiple dimensions and give you the most comprehensive advice！
-- ** 4. Intelligent Suggestion: **
-    Intelligently provide valuable insights for your preprocessing procedure.
-- **5. Visualization and Dashboard!**
-    Quick, colorful, informative dashboard to let you aim your target users.
-
+        - ** 1. Deep understanding your data profile: **
+            KYC,KYB and Know your data!
+        - ** 2. Check your data Quality:**
+            Ensure your data quality from 6 dimensions and not be deceived!
+        - ** 3. Powerful Analytics tools:**
+           Analyze your data set in multiple dimensions and give you the most comprehensive advice！
+        - ** 4. Intelligent Suggestion: **
+            Intelligently provide valuable insights for your preprocessing procedure.
+        - **5. Visualization and Dashboard!**
+            Quick, colorful, informative dashboard to let you aim your target users.
         '''
 
 with tab3:
