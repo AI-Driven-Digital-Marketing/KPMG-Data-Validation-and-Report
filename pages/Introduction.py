@@ -52,7 +52,7 @@ with tab2:
     ### Key Problems!
     1. Does your business facing a Data swamp?
     2. Does you always difficult to find insight from complex data, uncleaned data, and data that cannot provide real-time analysis?
-    ----------
+    
     **KYC:**
     1. What age group is best to target your business with?
     2. What user characteristics are most important for your business to focus on?
