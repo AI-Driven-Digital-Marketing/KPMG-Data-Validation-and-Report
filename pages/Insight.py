@@ -240,4 +240,4 @@ with tab3:
     - Upon analyzing the high-value customers, it is noted that their industries and car ownership rates are comparable. As such, these factors should not be heavily considered when developing marketing strategies.
     '''
     st.text_area('Comment & Note', 
-                      'Leave your OWn NOTE and Comment to here!!')
+                      'You Can Leave Your Own NOTE and Comment on Here!!')
