@@ -45,11 +45,14 @@ with tab1:
        3. **Scalability and Security:** The platform is designed to be scalable and secure, ensuring that it can accommodate growing amounts of data and protect sensitive information.
        '''
 with tab2:
-    st.markdown('## Solutions & Anticipations')
+    st.markdown('## Data Growth Hacker!')
     st.video('src/pexels-rostislav-uzunov-7385122.mp4')
 
     '''
-    
+    - Is your business facing a Data swamp?
+    - Difficult to find insight from complex data, uncleaned data, and data that cannot provide real-time analysis?
+    - KPMG helps you give solid data suggestions from multiple dimensions including customers, company status, and market analysis to help your business grow at a high speed.
+    - ### --- "You can be the DATA GROWTH HACKER!"
     '''    
 with tab3:
     
