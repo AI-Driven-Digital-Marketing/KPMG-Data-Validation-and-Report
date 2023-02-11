@@ -25,7 +25,7 @@ st.sidebar.text_area('Contact Infomation',
 # add_slider = st.sidebar.slider(
 #     'Select a range of values',
 #     0.0, 100.0, (25.0, 75.0)
-)
+# )
 #####################Main page###
 
 tab1, tab2, tab3 = st.tabs(["Why us?" , "Solutions & Anticipations", "About this Platform"])
