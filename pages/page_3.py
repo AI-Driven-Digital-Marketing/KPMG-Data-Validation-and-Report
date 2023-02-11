@@ -19,7 +19,7 @@ st.sidebar.text_area('Contact Infomation',
 
 # add mugshot to sidebar
 mugshot = st.sidebar.camera_input(
-  '##wCreate your mugshot for your own Report'
+  '## Create your mugshot for your own Report'
 )
 # Add a slider to the sidebar:
 add_slider = st.sidebar.slider(
@@ -33,7 +33,8 @@ tab1, tab2, tab3 = st.tabs(["Why us?" , "Solutions & Anticipations", "About this
 with tab1:
     col1, col2 = st.columns(2)
     with col1:
-       st.image("https://static.streamlit.io/examples/cat.jpg")
+       image1 = Image.open('src/IMG_5301 2.JPG')
+       st.image(image1, caption='Data World')
 
     with col2:
         '''
