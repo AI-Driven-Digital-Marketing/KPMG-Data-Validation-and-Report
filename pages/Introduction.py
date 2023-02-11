@@ -38,11 +38,11 @@ with tab1:
     with col2:
        st.markdown('## Why Us?')
        '''
-       1. User-Friendly Interface: The platform features a user-friendly interface that allows users to easily visualize, manipulate, and explore their data, without requiring specialized technical skills.
+       1. **User-Friendly Interface:** The platform features a user-friendly interface that allows users to easily visualize, manipulate, and explore their data, without requiring specialized technical skills.
 
-       2. Advanced Analytics: The platform includes advanced analytics capabilities, such as machine learning algorithms, predictive modeling, and statistical analysis, allowing users to uncover insights and make data-driven decisions.
+       2. **Advanced Analytics:** The platform includes advanced analytics capabilities, such as machine learning algorithms, predictive modeling, and statistical analysis, allowing users to uncover insights and make data-driven decisions.
        
-       3. Scalability and Security: The platform is designed to be scalable and secure, ensuring that it can accommodate growing amounts of data and protect sensitive information.
+       3. **Scalability and Security:** The platform is designed to be scalable and secure, ensuring that it can accommodate growing amounts of data and protect sensitive information.
        '''
     
 with tab2:
