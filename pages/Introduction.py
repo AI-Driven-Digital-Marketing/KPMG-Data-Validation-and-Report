@@ -66,7 +66,6 @@ with tab1:
         '''
     with col2:
         '''
-        ------
         #### 2.KYB:  
         **(Know your Business)**
         1. What industry is the key account strategy area that your business needs to focus on？
@@ -79,7 +78,7 @@ with tab1:
     ### Solutions
     - KPMG helps you give solid data suggestions from multiple dimensions including customers, company status, and market analysis to help your business grow at a high speed.
     - Know your customer! Know your business! And Empower one-step solution to make **GROWTH & REVENUE**!
-    ####                                                        ---  "You can be the DATA GROWTH HACKER FAST!!"
+                                    ####        ---  "You can be the DATA GROWTH HACKER FAST!!"
     '''    
 with tab3:
     
