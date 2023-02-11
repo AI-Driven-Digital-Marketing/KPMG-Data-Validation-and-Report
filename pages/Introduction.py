@@ -30,7 +30,7 @@ st.sidebar.text_area('Contact Infomation',
 
 tab1, tab2, tab3 = st.tabs(["Why us?" , "Key Problems&Solutions", "About Platform"])
 
-with tab1:
+with tab2:
     col1, col2 = st.columns(2,gap = "medium")
     with col1:
        st.image('src/IMG_5301 2.JPG', width = 365)
@@ -44,7 +44,7 @@ with tab1:
        
        3. **Scalability and Security:** The platform is designed to be scalable and secure, ensuring that it can accommodate growing amounts of data and protect sensitive information.
        '''
-with tab2:
+with tab1:
     st.markdown('## Data Growth Hacker!')
     st.video('src/pexels-rostislav-uzunov-7385122.mp4')
 
