@@ -18,9 +18,9 @@ st.sidebar.text_area('Contact Infomation',
                       'Please leave your contact information on here! You would get compelete report!!')
 
 # add mugshot to sidebar
-mugshot = st.sidebar.camera_input(
-  '## Create your mugshot for your own Report'
-)
+# mugshot = st.sidebar.camera_input(
+#   '## Create your mugshot for your own Report'
+# )
 # Add a slider to the sidebar:
 add_slider = st.sidebar.slider(
     'Select a range of values',
@@ -33,7 +33,7 @@ tab1, tab2, tab3 = st.tabs(["Why us?" , "Solutions & Anticipations", "About this
 with tab1:
     col1, col2 = st.columns(2,gap = "medium")
     with col1:
-       st.image('src/IMG_5301 2.JPG',width = 800)
+       st.image('src/IMG_5301 2.JPG',width = 100)
 
     with col2:
        st.markdown('## Why Us?')
