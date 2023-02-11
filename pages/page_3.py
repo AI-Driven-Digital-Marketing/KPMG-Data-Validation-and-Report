@@ -7,7 +7,7 @@ st.sidebar.markdown("Page 3 🎉")
 import streamlit as st
 
 st.camera_input(
-  'Create your mugshot for your own Report'
+  '##wCreate your mugshot for your own Report'
 )
 
 # Add a selectbox to the sidebar:
@@ -15,6 +15,9 @@ add_selectbox = st.sidebar.selectbox(
     'How would you like to be contacted?',
     ('Email', 'Home phone', 'Mobile phone')
 )
+
+st.sidebar.text_area(
+  'Leave you infomation on here!')
 
 # Add a slider to the sidebar:
 add_slider = st.sidebar.slider(
