@@ -3,8 +3,8 @@ import pandas as pd
 from datetime import datetime
 import matplotlib.pyplot as plt
 import seaborn as sns
-st.markdown("# Page 2 ❄️")
-st.sidebar.markdown("Page 2")
+st.markdown("# Insight")
+st.sidebar.markdown("Insight")
 
 #Shit hole begin
 transactions = pd.read_excel('KPMG_VI_New_raw_data_update_final.xlsx',sheet_name='Transactions',header=1)
@@ -20,10 +20,49 @@ Transactions.dropna(subset=['product_first_sold_date'], inplace=True)
 Transactions.product_first_sold_date = Transactions.product_first_sold_date.apply(lambda x: datetime.fromtimestamp(x))
 Transactions.transaction_date = Transactions.transaction_date.astype('string')
 Transactions['transaction_month'] = Transactions.transaction_date.apply(lambda x: x[5:7])
+Transactions.product_id = Transactions.product_id.astype('string')
+product_summary = Transactions.groupby(['product_id'],as_index=False).aggregate(
+            {'list_price':'mean',
+             'brand':'first',
+            'standard_cost':'mean',
+            'transaction_id':'count'})
+product_summary.sort_values(by=['list_price','standard_cost'],inplace=True,ascending=[False, True])
+product_summary = product_summary.rename({'transaction_id': 'count'}, axis=1)
+brands_name = Transactions.brand.unique()
+chosen_brand = st.selectbox(
+    'Choose brand here:',
+    brands_name)
 
-
-
-
+brand_fig, ax = plt.subplots(1,2,figsize=(16, 9))
+ax[0].yaxis.tick_right()
+sns.barplot(data=product_summary[product_summary.brand == chosen_brand], 
+              x="list_price", 
+              y="product_id", 
+                  ax = ax[0],
+                  color = 'green'
+             )
+sns.barplot(data=product_summary[product_summary.brand == chosen_brand], 
+              x="standard_cost", 
+              y="product_id", 
+                  ax = ax[0],
+                  color = 'orange'
+                
+             )
+sns.barplot(data=product_summary[product_summary.brand == chosen_brand], 
+              x="count", 
+              y="product_id", 
+                  ax = ax[1],
+                  color = 'lightblue'
+             )
+ax[0].legend(['price','cost'],fontsize=14)
+ax[0].invert_xaxis()
+leg = ax[0].get_legend()
+leg.legendHandles[0].set_color('green')
+leg.legendHandles[1].set_color('orange')
+ax[1].legend(['Count'], fontsize = 14)
+leg1 = ax[1].get_legend()
+leg1.legendHandles[0].set_color('lightblue')
+st.pyplot(brand_fig)
 # brand count
 st.write('- Each brand has different marketing strategy and target populations, their sales statistics are hence different.')
 st.write('- Understanding these difference is important when organizing any business activities.')
@@ -64,8 +103,8 @@ st.title('Brand Selling Proportion')
 st.pyplot(fig)
 
 #Insight
-st.write('- Brands are cutting market evenly.')
-st.write('Solex is taking biggest cut with number of 21%, followed by Giant Bicycles and WeareA2B.')
+st.write('- Brands are cutting market evenly. Solex is taking biggest cut with number of 21%, followed by Giant Bicycles and WeareA2B.')
+
 #---------------Bing End -----------------------------
 
 
@@ -80,9 +119,8 @@ cols = ['brand','online_sold','offline_sold']
 brand_online_vs_offline = brand_online_sold.merge(brand_offline_sold,how='inner',on = 'index').set_axis(cols,axis=1)
 st.dataframe(brand_online_vs_offline)
 
-st.write('Online shopping had a very strong impact on traditional market. Bicycles are not excluded.')
-st.write('For all the brands, online shopping took around 50% share. ')
-st.write("Amount of Customers still prefer offline shopping. Indicating online shopping convinence still can not fully replace offline experience")
+st.write('For all the brands, online proportion and offline are closed, which proves the importance of off line store in Bike market.')
+
 #---------------Bing Online vs Brand End -------------------------------
 
 
@@ -106,11 +144,10 @@ fig, ax = plt.subplots(figsize = (10,6))
 sns.barplot(data = profit, x = 'brand',y = 'profit',hue='product_class',)
 plt.tight_layout()
 st.pyplot(fig)
+st.write('OHM and Solex have amazing profit on low class products.\
+\nTrek and Weare A2B mainly focus on medium class.\
+\nGiant and Nocro are not competitive in profits compared to their opposite. With similar share of markets, company is making much less revenue.')
 
-
-st.write('OHM and Solex have amazing profit on low class products.')
-st.write('Trek and Weare A2B mainly focus on medium class.')
-st.write('Giant and Nocro are not competitive in profits compared to their opposite. With similar share of markets, company is making much less revenue.')
 
 
 #---------------Bing Average Profit of brands in different class End -------------------------------
@@ -145,22 +182,6 @@ st.write('Proportion of valuable customers is having similer pattern with all-cu
 #---------------Bing Rich Customer Industry End -------------------------------
 
 
-
-#---------------Bing Age Distribution Start -------------------------------
-
-st.write('## Customer Age Distribution ')
-#demo_age = Demographic.age.dropna()
-demo_age = Demographic[Demographic['age']<=100].age.dropna()
-
-fig, ax = plt.subplots(figsize = (10,6))
-ax.set_title('')
-sns.histplot(demo_age)
-st.title('Customer Age Distribution')
-st.pyplot(fig)
-
-#---------------Bing Age Distribution End -------------------------------
-
-
 # Customer payment count
 CustomerAddress = pd.read_excel('KPMG_VI_New_raw_data_update_final.xlsx',sheet_name= 'CustomerAddress')
 CustomerAddress.columns = CustomerAddress.iloc[0,:]
@@ -175,13 +196,16 @@ Cutomer_brand['list_price_avg'] = Cutomer_brand['list_price'] / Cutomer_brand['b
 Cutomer_brand['profit_avg'] = Cutomer_brand['profit'] / Cutomer_brand['bill_count']
 Cutomer_brand['profit_rate'] = 1- Cutomer_brand['standard_cost']/Cutomer_brand['list_price']
 Cutomer_brand = Cutomer_brand.merge(CustomerAddress[['customer_id', 'property_valuation']], on = 'customer_id')
+Cutomer_brand
 st.write('- Pay closely attention to customer purchase frequency as we want to keep our customers and expand their consumptions.')
 fig, ax = plt.subplots(figsize = (10,6))
 Cutomer_brand.hist(['bill_count'] , ax = ax)
 ax.set_title('')
+ax.set_xlabel('Frequency')
+ax.set_ylabel('Customer counts')
 st.title('Purchase Frequency Counts')
 st.pyplot(fig)
-
+st.write('- Most customers bought 5 products for this year.')
 fig1, ax1 = plt.subplots(figsize = (10,6))
 Cutomer_brand.plot.scatter(['list_price_avg'], ['profit_avg'], 
                            figsize = (16,9),
@@ -189,5 +213,8 @@ Cutomer_brand.plot.scatter(['list_price_avg'], ['profit_avg'],
                            ax = ax1
                            )
 ax1.set_title('')
+ax1.set_xlabel('Average Purchase Price')
+ax1.set_ylabel('Average Profit')
 st.title('Price versus Profit')
 st.pyplot(fig1)
+st.write('- The deeper the color, the richer the customer. Hence, the property doesn\'t has direct impact to purchase')
