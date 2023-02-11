@@ -84,6 +84,35 @@ st.write('For all the brands, online proportion and offline are closed, which pr
 
 #---------------Bing Online vs Brand End -------------------------------
 
+
+
+#---------------Bing Average Profit of brands in different class Start -------------------------------
+
+st.write('## Average Profit of brands in different class')
+transactions['profit'] = transactions['list_price'] - transactions['standard_cost']
+
+profit = transactions.groupby(['brand','product_class']).mean()[['list_price','standard_cost','profit']]
+#profit = transactions.groupby(['brand']).mean()[['profit']]
+
+profit.reset_index(inplace=True)
+my_order = ['low','medium','high']
+
+profit['product_class'] = profit['product_class'].astype('category')
+profit['product_class'].cat.reorder_categories(my_order, inplace= True)
+profit.sort_values(['brand','product_class'])
+
+fig, ax = plt.subplots(figsize = (10,6))
+sns.barplot(data = profit, x = 'brand',y = 'profit',hue='product_class',)
+plt.tight_layout()
+st.pyplot(fig)
+st.write('OHM and Solex have amazing profit on low class products.\
+\nTrek and Weare A2B mainly focus on medium class.\
+\nGiant and Nocro are not competitive in profits compared to their opposite. With similar share of markets, company is making much less revenue.')
+
+
+
+#---------------Bing Average Profit of brands in different class End -------------------------------
+
 # Customer payment count
 CustomerAddress = pd.read_excel('KPMG_VI_New_raw_data_update_final.xlsx',sheet_name= 'CustomerAddress')
 CustomerAddress.columns = CustomerAddress.iloc[0,:]
