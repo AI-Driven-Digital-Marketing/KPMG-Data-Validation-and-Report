@@ -26,7 +26,7 @@ add_slider = st.sidebar.slider(
     'Select a range of values',
     0.0, 100.0, (25.0, 75.0)
 )
-st.image(mugshot, width=80)
+st.image(mugshot, width=150)
 
 @st.experimental_memo
 def load_data(url):
