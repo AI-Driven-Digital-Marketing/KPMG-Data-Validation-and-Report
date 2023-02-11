@@ -3,10 +3,10 @@ import pandas as pd
 import numpy as np
 
 st.markdown("#  3 🎉")
-st.sidebar.markdown("Page 3 🎉")
+st.sidebar.markdown("Contact & Controller🎉")
 import streamlit as st
 
-st.camera_input(
+st.sidebar.camera_input(
   '##wCreate your mugshot for your own Report'
 )
 
