@@ -52,11 +52,12 @@ with tab1:
     ### Key Problems!
     1. Does your business facing a Data swamp?
     2. Does you always difficult to find insight from complex data, uncleaned data, and data that cannot provide real-time analysis?
+   
     '''
     col1, col2 = st.columns(2,gap = "medium")
     with col1:
         '''
-        #### KYC:
+        #### 1.KYC(Know your Customers):
         1. What age group is best to target your business with?
         2. What user characteristics are most important for your business to focus on?
         3. Which users have the strongest spending power?
@@ -64,7 +65,7 @@ with tab1:
         '''
     with col2:
         '''
-        #### KYB:  
+        #### 2.KYB(Know your Business):  
         1. What industry is the key account strategy area that your business needs to focus on？
         2. Where are the components and growth points of the company's business？
         3. Specify your brand's profitability and financial situation!
