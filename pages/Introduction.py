@@ -3,8 +3,7 @@ import pandas as pd
 import numpy as np
 
 st.markdown("# KPMG Data Analysis Platform 🎉")
-st.sidebar.markdown("Contact & Controller🎉")
-import streamlit as st
+st.sidebar.markdown("Contact Info & Controller ")
 
 
 
@@ -28,15 +27,15 @@ st.sidebar.text_area('Contact Infomation',
 # )
 #####################Main page###
 
-tab1, tab2, tab3 = st.tabs(["Why us?" , "Key Problems&Solutions", "About Platform"])
+tab1, tab2, tab3 = st.tabs(["Key Problems & Solutions","Why us?","Service & Product"])
 
-with tab1:
+with tab2:
     col1, col2 = st.columns(2,gap = "medium")
     with col1:
-       st.image('src/IMG_5301 2.JPG', width = 365)
+       st.image('src/IMG_5301 2.JPG', width = 360)
 
     with col2:
-       st.markdown('## Why Us?')
+       st.markdown('### Why Us?')
        '''
        1. **User-Friendly Interface:** The platform features a user-friendly interface that allows users to easily visualize, manipulate, and explore their data, without requiring specialized technical skills.
 
@@ -44,12 +43,45 @@ with tab1:
        
        3. **Scalability and Security:** The platform is designed to be scalable and secure, ensuring that it can accommodate growing amounts of data and protect sensitive information.
        '''
-with tab2:
-    st.markdown('## Solutions & Anticipations')
+    st.image('src/22391676133642_.pic.jpg')
+with tab1:
+    st.markdown('## Data Growth Hacker!')
     st.video('src/pexels-rostislav-uzunov-7385122.mp4')
 
     '''
-    
+    ### Key Problems!
+    1. Does your business facing a Data swamp?
+    2. Does you always difficult to find insight from complex data, uncleaned data, and data that cannot provide real-time analysis?
+   
+    '''
+    col1, col2 = st.columns(2,gap = "medium")
+    with col1:
+        '''
+        #### 1.KYC:
+        **(Know your Customers)**
+        1. What age group is best to target your business with?
+        2. What user characteristics are most important for your business to focus on?
+        3. Which users have the strongest spending power?
+        4. Which customer segment has the highest customer value?
+        
+        -------------- RUN Your Business ---------------->>>>
+        '''
+    with col2:
+        '''
+        ------
+        #### 2.KYB:  
+        **(Know your Business)**
+        1. What industry is the key account strategy area that your business needs to focus on？
+        2. Where are the components and growth points of the company's business？
+        3. Specify your brand's profitability and financial situation!
+        4. How should your brand do product differentiation strategy in market share?
+        '''
+    '''
+    -------
+    ### Solutions
+    - KPMG helps you give solid data suggestions from multiple dimensions including customers, company status, and market analysis to help your business grow at a high speed.
+    - Know your customer! Know your business! And Empower one-step solution to make **GROWTH & REVENUE**!
+    ####        ---  "You can be the DATA GROWTH HACKER FAST!!"
     '''    
 with tab3:
     

@@ -242,3 +242,5 @@ with tab3:
     - The car ownership rate among customers is approximately 50%, which is lower compared to the 87% rate in Australia. Bikes could be a viable alternative for cars in specific areas.
     - Upon analyzing the high-value customers, it is noted that their industries and car ownership rates are comparable. As such, these factors should not be heavily considered when developing marketing strategies.
     '''
+    st.text_area('Comment & Note', 
+                      'You Can Leave Your Own NOTE and Comment on Here!!')
