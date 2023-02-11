@@ -44,6 +44,7 @@ with tab2:
        
        3. **Scalability and Security:** The platform is designed to be scalable and secure, ensuring that it can accommodate growing amounts of data and protect sensitive information.
        '''
+    st.image('src/22391676133642_.pic.jpg')
 with tab1:
     st.markdown('## Data Growth Hacker!')
     st.video('src/pexels-rostislav-uzunov-7385122.mp4')
