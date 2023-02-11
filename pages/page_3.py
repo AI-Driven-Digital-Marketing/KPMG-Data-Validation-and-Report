@@ -33,15 +33,21 @@ tab1, tab2, tab3 = st.tabs(["Why us?" , "Solutions & Anticipations", "About this
 with tab1:
     col1, col2 = st.columns(2,gap = "medium")
     with col1:
-#        image1 = Image.open('src/IMG_5301 2.JPG')
        st.image('src/IMG_5301 2.JPG')
 
     with col2:
         '''
-        我们很牛逼
-        1.提供
-        2.提供b
-        3.提供c
+- 1. Deep understanding your data profile: 
+    KYC,KYB and Know your data!
+- 2. Check your data Quality:
+    Ensure your data quality from 6 dimensions and not be deceived!
+- 3. Powerful Analytics tools:
+   Analyze your data set in multiple dimensions and give you the most comprehensive advice！
+- 4. Intelligent Suggestion: 
+    Intelligently provide valuable insights for your preprocessing procedure.
+- 5. Visualization and Dashboard!
+    Quick, colorful, informative dashboard to let you aim your target users.
+
         '''
     
 with tab2:
