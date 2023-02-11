@@ -68,7 +68,7 @@ with tab2:
         '''
 
     with col2:
-       st.image('src/IMG_5301 2.JPG')
+       st.video('src/pexels-rostislav-uzunov-7385122.mp4')
       
 
 
