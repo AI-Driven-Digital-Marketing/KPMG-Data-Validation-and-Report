@@ -57,6 +57,7 @@ with tab1:
     1. What age group is best to target your business with?
     2. What user characteristics are most important for your business to focus on?
     3. Which users have the strongest spending power?
+    4. Which customer segment has the highest customer value?
     
     #### KYB:  
     1. What industry is the key account strategy area that your business needs to focus on？
