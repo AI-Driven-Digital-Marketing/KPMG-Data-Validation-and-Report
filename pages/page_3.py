@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
-st.markdown("#  3 🎉")
+st.markdown("# KPMG Data Analysis Platform 🎉")
 st.sidebar.markdown("Contact & Controller🎉")
 import streamlit as st
 
@@ -27,7 +27,6 @@ add_slider = st.sidebar.slider(
     0.0, 100.0, (25.0, 75.0)
 )
 #####################Main page###
-st.markdown("# KPMG Data Analysis Platform")
 
 tab1, tab2, tab3 = st.tabs(["Why us?" , "Solutions & Anticipations", "About this Platform"])
 
@@ -75,12 +74,12 @@ with tab3:
 
 
 
-@st.experimental_memo
-def load_data(url):
-    df = pd.read_csv(url)
-    return df
+# @st.experimental_memo
+# def load_data(url):
+#     df = pd.read_csv(url)
+#     return df
 
-df = load_data("https://github.com/plotly/datasets/raw/master/uber-rides-data1.csv")
-st.dataframe(df)
+# df = load_data("https://github.com/plotly/datasets/raw/master/uber-rides-data1.csv")
+# st.dataframe(df)
 
-st.button("Rerun")
+# st.button("Rerun")
