@@ -69,7 +69,7 @@ with tab2:
 
     with col2:
        st.image('src/BIG-DATA.jpeg')
-       st.image('src/BIG-DATA.jpeg')
+       st.image('src/7d5fd7da8b1a41799087aa517ef44a24.jpeg')
       
 
 
