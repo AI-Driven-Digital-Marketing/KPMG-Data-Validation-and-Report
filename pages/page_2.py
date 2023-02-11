@@ -64,8 +64,8 @@ st.title('Brand Selling Proportion')
 st.pyplot(fig)
 
 #Insight
-st.write('- Brands are cutting market evenly. Solex is taking biggest cut with number of 21%, followed by Giant Bicycles and WeareA2B.')
-
+st.write('- Brands are cutting market evenly.')
+st.write('Solex is taking biggest cut with number of 21%, followed by Giant Bicycles and WeareA2B.')
 #---------------Bing End -----------------------------
 
 
@@ -80,8 +80,9 @@ cols = ['brand','online_sold','offline_sold']
 brand_online_vs_offline = brand_online_sold.merge(brand_offline_sold,how='inner',on = 'index').set_axis(cols,axis=1)
 st.dataframe(brand_online_vs_offline)
 
-st.write('For all the brands, online proportion and offline are closed, which proves the importance of off line store in Bike market.')
-
+st.write('Online shopping had a very strong impact on traditional market. Bicycles are not excluded.')
+st.write('For all the brands, online shopping took around 50% share. ')
+st.write("Amount of Customers still prefer offline shopping. Indicating online shopping convinence still can not fully replace offline experience")
 #---------------Bing Online vs Brand End -------------------------------
 
 
@@ -105,13 +106,60 @@ fig, ax = plt.subplots(figsize = (10,6))
 sns.barplot(data = profit, x = 'brand',y = 'profit',hue='product_class',)
 plt.tight_layout()
 st.pyplot(fig)
-st.write('OHM and Solex have amazing profit on low class products.\
-\nTrek and Weare A2B mainly focus on medium class.\
-\nGiant and Nocro are not competitive in profits compared to their opposite. With similar share of markets, company is making much less revenue.')
 
+
+st.write('OHM and Solex have amazing profit on low class products.')
+st.write('Trek and Weare A2B mainly focus on medium class.')
+st.write('Giant and Nocro are not competitive in profits compared to their opposite. With similar share of markets, company is making much less revenue.')
 
 
 #---------------Bing Average Profit of brands in different class End -------------------------------
+
+
+
+
+#---------------Bing Rich Customer Industry Start -------------------------------
+
+st.write('## Valuable Customers Industry Source')
+Rich_Ind = Demographic[(Demographic['wealth_segment'] == 'Affluent Customer')|(Demographic['wealth_segment'] == 'High Net Worth')].groupby('job_industry_category').count().reset_index().iloc[:,0:2]
+
+labels = list(Rich_Ind['job_industry_category'])
+data = list(Rich_Ind['customer_id'])
+
+#define Seaborn color palette to use
+colors = sns.color_palette('pastel')[0:10]
+
+fig, ax = plt.subplots(figsize = (10,6))
+
+#create pie chart
+plt.pie(data, labels = labels, colors = colors, autopct='%.0f%%')
+plt.tight_layout()
+
+ax.set_title('')
+st.title('Valuable Customers in Industry')
+st.pyplot(fig)
+
+st.write('Proportion of valuable customers is having similer pattern with all-customers industry pattern.\
+\n No strong evidence indicating that customers from certain areas having higher willingness to pay.')
+
+#---------------Bing Rich Customer Industry End -------------------------------
+
+
+
+#---------------Bing Age Distribution Start -------------------------------
+
+st.write('## Customer Age Distribution ')
+#demo_age = Demographic.age.dropna()
+demo_age = Demographic[Demographic['age']<=100].age.dropna()
+
+fig, ax = plt.subplots(figsize = (10,6))
+ax.set_title('')
+sns.histplot(demo_age)
+st.title('Customer Age Distribution')
+st.pyplot(fig)
+
+#---------------Bing Age Distribution End -------------------------------
+
 
 # Customer payment count
 CustomerAddress = pd.read_excel('KPMG_VI_New_raw_data_update_final.xlsx',sheet_name= 'CustomerAddress')
