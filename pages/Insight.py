@@ -3,7 +3,7 @@ import pandas as pd
 from datetime import datetime
 import matplotlib.pyplot as plt
 import seaborn as sns
-st.set_page_config(layout="wide")
+#st.set_page_config(layout="wide")
 st.markdown("# Insight")
 st.sidebar.markdown("Insight")
 
