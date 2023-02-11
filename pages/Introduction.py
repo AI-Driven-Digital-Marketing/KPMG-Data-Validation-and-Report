@@ -3,8 +3,7 @@ import pandas as pd
 import numpy as np
 
 st.markdown("# KPMG Data Analysis Platform 🎉")
-st.sidebar.markdown("Contact & Controller🎉")
-import streamlit as st
+st.sidebar.markdown("Contact Info & Controller ")
 
 
 
@@ -36,7 +35,7 @@ with tab2:
        st.image('src/IMG_5301 2.JPG', width = 365)
 
     with col2:
-       st.markdown('## Why Us?')
+       st.markdown('### Why Us?')
        '''
        1. **User-Friendly Interface:** The platform features a user-friendly interface that allows users to easily visualize, manipulate, and explore their data, without requiring specialized technical skills.
 
