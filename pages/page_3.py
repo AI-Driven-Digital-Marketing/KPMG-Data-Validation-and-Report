@@ -34,7 +34,7 @@ with tab1:
     col1, col2 = st.columns(2)
     with col1:
 #        image1 = Image.open('src/IMG_5301 2.JPG')
-       st.image('src/IMG_5301 2.JPG', "medium")
+       st.image('src/IMG_5301 2.JPG', gap = "medium")
 
     with col2:
         '''
