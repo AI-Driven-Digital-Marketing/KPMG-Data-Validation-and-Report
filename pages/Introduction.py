@@ -32,7 +32,7 @@ tab1, tab2, tab3 = st.tabs(["Key Problems & Solutions","Why us?","Service & Prod
 with tab2:
     col1, col2 = st.columns(2,gap = "medium")
     with col1:
-       st.image('src/IMG_5301 2.JPG', width = 365)
+       st.image('src/IMG_5301 2.JPG', width = 360)
 
     with col2:
        st.markdown('### Why Us?')
