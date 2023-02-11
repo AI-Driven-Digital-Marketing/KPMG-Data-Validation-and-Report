@@ -36,7 +36,11 @@ with tab1:
        st.image('src/IMG_5301 2.JPG')
 
     with col2:
+'''
+1. User-Friendly Interface: The platform features a user-friendly interface that allows users to easily visualize, manipulate, and explore their data, without requiring specialized technical skills.
 
+2. Advanced Analytics: The platform includes advanced analytics capabilities, such as machine learning algorithms, predictive modeling, and statistical analysis, allowing users to uncover insights and make data-driven decisions.
+'''
     
 with tab2:
     
