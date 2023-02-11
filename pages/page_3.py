@@ -50,7 +50,7 @@ with tab2:
 
     with col2:
        st.title('Problems and Solutions')
-        '''
+       '''
         - ** 1. Deep understanding your data profile: **
             KYC,KYB and Know your data!
         - ** 2. Check your data Quality:**
