@@ -28,7 +28,7 @@ st.sidebar.text_area('Contact Infomation',
 # )
 #####################Main page###
 
-tab1, tab2, tab3 = st.tabs(["Why us?" , "Key Solutions", "About Platform"])
+tab1, tab2, tab3 = st.tabs(["Why us?" , "Key Problems&Solutions", "About Platform"])
 
 with tab1:
     col1, col2 = st.columns(2,gap = "medium")
