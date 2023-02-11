@@ -33,7 +33,7 @@ tab1, tab2, tab3 = st.tabs(["Why us?" , "Solutions & Anticipations", "About this
 with tab1:
     col1, col2 = st.columns(2,gap = "medium")
     with col1:
-       st.image('src/IMG_5301 2.JPG',width = 400)
+       st.image('src/IMG_5301 2.JPG',width = 360)
 
     with col2:
        st.markdown('## Why Us?')
@@ -68,13 +68,13 @@ with tab2:
         '''
 
     with col2:
-       st.video('src/pexels-rostislav-uzunov-7385122.mp4')
+       st.image('src/IMG_5301 2.JPG',width = 360)
       
 
 
 with tab3:
     
-    st.image("https://static.streamlit.io/examples/cat.jpg")
+    st.video('src/pexels-rostislav-uzunov-7385122.mp4')
 
     '''
     Your personal Report is here
