@@ -51,19 +51,19 @@ with tab2:
     with col1:
        st.markdown('## Solutions & Anticipations')
        '''
-        - 1. Deep understanding your data profile: 
+        - **Deep understanding your data profile**: 
             KYC,KYB and Know your data!
             
-        - 2. Check your data Quality:
+        - Check your data Quality:
             Ensure your data quality from 6 dimensions and not be deceived!
             
-        - 3. Powerful Analytics tools:
+        - Powerful Analytics tools:
            Analyze your data set in multiple dimensions and give you the most comprehensive advice！
            
-        - 4. Intelligent Suggestion: 
+        - Intelligent Suggestion: 
             Intelligently provide valuable insights for your preprocessing procedure.
             
-        - 5. Visualization and Dashboard!
+        - Visualization and Dashboard!
             Quick, colorful, informative dashboard to let you aim your target users.
         '''
 
