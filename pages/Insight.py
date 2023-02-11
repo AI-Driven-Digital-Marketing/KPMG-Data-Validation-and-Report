@@ -10,20 +10,24 @@ with tab1:
     st.sidebar.markdown("Company&Brand Insights")
 
     #Shit hole begin
-    transactions = pd.read_excel('KPMG_VI_New_raw_data_update_final.xlsx',sheet_name='Transactions',header=1)
-    NewCustomer = pd.read_excel('KPMG_VI_New_raw_data_update_final.xlsx',sheet_name='NewCustomerList',header=1)
-    Demographic  = pd.read_excel('KPMG_VI_New_raw_data_update_final.xlsx',sheet_name='CustomerDemographic')
-    CustomerAddress = pd.read_excel('KPMG_VI_New_raw_data_update_final.xlsx',sheet_name='CustomerAddress',header=1)
+    @st.cache_resource 
+    def read_excelData():
+        transactions = pd.read_excel('KPMG_VI_New_raw_data_update_final.xlsx',sheet_name='Transactions',header=1)
+        NewCustomer = pd.read_excel('KPMG_VI_New_raw_data_update_final.xlsx',sheet_name='NewCustomerList',header=1)
+        Demographic  = pd.read_excel('KPMG_VI_New_raw_data_update_final.xlsx',sheet_name='CustomerDemographic')
+        CustomerAddress = pd.read_excel('KPMG_VI_New_raw_data_update_final.xlsx',sheet_name='CustomerAddress',header=1)
 
 
-    Transactions = pd.read_excel('KPMG_VI_New_raw_data_update_final.xlsx',sheet_name= 'Transactions')
-    Transactions.columns = Transactions.iloc[0,:]
-    Transactions  = Transactions.iloc[1:,:]
-    Transactions.dropna(subset=['product_first_sold_date'], inplace=True)
-    Transactions.product_first_sold_date = Transactions.product_first_sold_date.apply(lambda x: datetime.fromtimestamp(x))
-    Transactions.transaction_date = Transactions.transaction_date.astype('string')
-    Transactions['transaction_month'] = Transactions.transaction_date.apply(lambda x: x[5:7])
-    Transactions.product_id = Transactions.product_id.astype('string')
+        Transactions = pd.read_excel('KPMG_VI_New_raw_data_update_final.xlsx',sheet_name= 'Transactions')
+        Transactions.columns = Transactions.iloc[0,:]
+        Transactions  = Transactions.iloc[1:,:]
+        Transactions.dropna(subset=['product_first_sold_date'], inplace=True)
+        Transactions.product_first_sold_date = Transactions.product_first_sold_date.apply(lambda x: datetime.fromtimestamp(x))
+        Transactions.transaction_date = Transactions.transaction_date.astype('string')
+        Transactions['transaction_month'] = Transactions.transaction_date.apply(lambda x: x[5:7])
+        Transactions.product_id = Transactions.product_id.astype('string')
+        return transactions,NewCustomer,Demographic,CustomerAddress,Transactions
+    transactions,NewCustomer,Demographic,CustomerAddress,Transactions = read_excelData()
     product_summary = Transactions.groupby(['product_id'],as_index=False).aggregate(
                 {'list_price':'mean',
                  'brand':'first',
@@ -188,9 +192,6 @@ with tab2:
 
 
     # Customer payment count
-    CustomerAddress = pd.read_excel('KPMG_VI_New_raw_data_update_final.xlsx',sheet_name= 'CustomerAddress')
-    CustomerAddress.columns = CustomerAddress.iloc[0,:]
-    CustomerAddress  = CustomerAddress.iloc[1:,:]
     Customer_counts = Transactions.groupby(['customer_id'],as_index=False)['list_price'].count()
     Customer_counts.columns = ['customer_id', 'bill_count']
     # Customer payment revenue
@@ -200,7 +201,9 @@ with tab2:
     Cutomer_brand['list_price_avg'] = Cutomer_brand['list_price'] / Cutomer_brand['bill_count']
     Cutomer_brand['profit_avg'] = Cutomer_brand['profit'] / Cutomer_brand['bill_count']
     Cutomer_brand['profit_rate'] = 1- Cutomer_brand['standard_cost']/Cutomer_brand['list_price']
-    Cutomer_brand = Cutomer_brand.merge(CustomerAddress[['customer_id', 'property_valuation']], on = 'customer_id')
+    Cutomer_brand = Cutomer_brand.merge(CustomerAddress[['customer_id', 'property_valuation']], 
+                                        on = 'customer_id'
+                                       )
     Cutomer_brand
     st.write('- Pay closely attention to customer purchase frequency as we want to keep our customers and expand their consumptions.')
     fig, ax = plt.subplots(figsize = (10,6))
