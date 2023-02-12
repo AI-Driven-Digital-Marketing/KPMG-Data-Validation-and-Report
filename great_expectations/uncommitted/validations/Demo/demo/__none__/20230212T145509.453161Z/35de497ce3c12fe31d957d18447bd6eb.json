@@ -1,0 +1,118 @@
+{
+  "evaluation_parameters": {},
+  "meta": {
+    "active_batch_definition": {
+      "batch_identifiers": {},
+      "data_asset_name": "Demographic.csv",
+      "data_connector_name": "default_inferred_data_connector_name",
+      "datasource_name": "Demographic_datasource"
+    },
+    "batch_markers": {
+      "ge_load_time": "20230212T195509.457325Z",
+      "pandas_data_fingerprint": "cf2c9e31a166ddbc250c56b7aff4ba42"
+    },
+    "batch_spec": {
+      "path": "/Users/ziwei/Documents/INFO 7374 Digital Marketing/StreamLit/INFO 7374 DM Project/great_expectations/../GEDataSource/Demographic.csv"
+    },
+    "checkpoint_id": null,
+    "checkpoint_name": "Demographic.csv_Demo.demo",
+    "expectation_suite_name": "Demo.demo",
+    "great_expectations_version": "0.15.48",
+    "run_id": {
+      "run_name": null,
+      "run_time": "2023-02-12T14:55:09.453161+00:00"
+    },
+    "validation_id": null,
+    "validation_time": "20230212T195509.476496Z"
+  },
+  "results": [
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_table_row_count_to_be_between",
+        "kwargs": {
+          "batch_id": "35de497ce3c12fe31d957d18447bd6eb",
+          "max_value": 4000,
+          "min_value": 4000
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {},
+              "metric_name": "table.row_count",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 4000
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_table_columns_to_match_set",
+        "kwargs": {
+          "batch_id": "35de497ce3c12fe31d957d18447bd6eb",
+          "column_set": [
+            "job_title",
+            "job_industry_category",
+            "past_3_years_bike_related_purchases",
+            "name",
+            "owns_car",
+            "age",
+            "wealth_segment",
+            "deceased_indicator",
+            "tenure",
+            "customer_id",
+            "DOB",
+            "gender"
+          ],
+          "exact_match": null
+        },
+        "meta": {
+          "profiler_details": {
+            "success_ratio": 1.0
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "observed_value": [
+          "customer_id",
+          "name",
+          "gender",
+          "past_3_years_bike_related_purchases",
+          "DOB",
+          "age",
+          "job_title",
+          "job_industry_category",
+          "wealth_segment",
+          "deceased_indicator",
+          "owns_car",
+          "tenure"
+        ]
+      },
+      "success": true
+    }
+  ],
+  "statistics": {
+    "evaluated_expectations": 2,
+    "success_percent": 100.0,
+    "successful_expectations": 2,
+    "unsuccessful_expectations": 0
+  },
+  "success": true
+}

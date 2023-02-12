@@ -1,0 +1,106 @@
+{
+  "evaluation_parameters": {},
+  "meta": {
+    "active_batch_definition": {
+      "batch_identifiers": {},
+      "data_asset_name": "CustomerAddress.csv",
+      "data_connector_name": "default_inferred_data_connector_name",
+      "datasource_name": "Address_DS"
+    },
+    "batch_markers": {
+      "ge_load_time": "20230212T195542.989037Z",
+      "pandas_data_fingerprint": "03045302708ac0ce8f9b5e122c6f13b2"
+    },
+    "batch_spec": {
+      "path": "/Users/ziwei/Documents/INFO 7374 Digital Marketing/StreamLit/INFO 7374 DM Project/great_expectations/../GEDataSource/CustomerAddress.csv"
+    },
+    "checkpoint_id": null,
+    "checkpoint_name": "CustomerAddress.csv_Address.demo",
+    "expectation_suite_name": "Address.demo",
+    "great_expectations_version": "0.15.48",
+    "run_id": {
+      "run_name": null,
+      "run_time": "2023-02-12T14:55:42.984924+00:00"
+    },
+    "validation_id": null,
+    "validation_time": "20230212T195543.002347Z"
+  },
+  "results": [
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_table_row_count_to_be_between",
+        "kwargs": {
+          "batch_id": "8af27e6d3245a0d51ba2b0fc58b39635",
+          "max_value": 3999,
+          "min_value": 3999
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {},
+              "metric_name": "table.row_count",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 3999
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_table_columns_to_match_set",
+        "kwargs": {
+          "batch_id": "8af27e6d3245a0d51ba2b0fc58b39635",
+          "column_set": [
+            "customer_id",
+            "country",
+            "postcode",
+            "property_valuation",
+            "address",
+            "state"
+          ],
+          "exact_match": null
+        },
+        "meta": {
+          "profiler_details": {
+            "success_ratio": 1.0
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "observed_value": [
+          "customer_id",
+          "address",
+          "postcode",
+          "state",
+          "country",
+          "property_valuation"
+        ]
+      },
+      "success": true
+    }
+  ],
+  "statistics": {
+    "evaluated_expectations": 2,
+    "success_percent": 100.0,
+    "successful_expectations": 2,
+    "unsuccessful_expectations": 0
+  },
+  "success": true
+}

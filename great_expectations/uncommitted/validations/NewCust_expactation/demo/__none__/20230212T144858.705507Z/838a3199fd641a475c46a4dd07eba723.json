@@ -1,0 +1,140 @@
+{
+  "evaluation_parameters": {},
+  "meta": {
+    "active_batch_definition": {
+      "batch_identifiers": {},
+      "data_asset_name": "NewCustomer.csv",
+      "data_connector_name": "default_inferred_data_connector_name",
+      "datasource_name": "New_customer"
+    },
+    "batch_markers": {
+      "ge_load_time": "20230212T194858.709939Z",
+      "pandas_data_fingerprint": "c82002bdf6ee2c711baaa0cd44b3345f"
+    },
+    "batch_spec": {
+      "path": "/Users/ziwei/Documents/INFO 7374 Digital Marketing/StreamLit/INFO 7374 DM Project/great_expectations/../GEDataSource/NewCustomer.csv"
+    },
+    "checkpoint_id": null,
+    "checkpoint_name": "NewCustomer.csv_NewCust_expactation.demo",
+    "expectation_suite_name": "NewCust_expactation.demo",
+    "great_expectations_version": "0.15.48",
+    "run_id": {
+      "run_name": null,
+      "run_time": "2023-02-12T14:48:58.705507+00:00"
+    },
+    "validation_id": null,
+    "validation_time": "20230212T194858.727243Z"
+  },
+  "results": [
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_table_row_count_to_be_between",
+        "kwargs": {
+          "batch_id": "838a3199fd641a475c46a4dd07eba723",
+          "max_value": 1000,
+          "min_value": 1000
+        },
+        "meta": {
+          "profiler_details": {
+            "metric_configuration": {
+              "domain_kwargs": {},
+              "metric_name": "table.row_count",
+              "metric_value_kwargs": null
+            },
+            "num_batches": 1
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 1000
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_table_columns_to_match_set",
+        "kwargs": {
+          "batch_id": "838a3199fd641a475c46a4dd07eba723",
+          "column_set": [
+            "past_3_years_bike_related_purchases",
+            "postcode",
+            "last_name",
+            "property_valuation",
+            "job_title",
+            "job_industry_category",
+            "deceased_indicator",
+            "Rank",
+            "country",
+            "gender",
+            "Unnamed: 17",
+            "owns_car",
+            "Unnamed: 20",
+            "Value",
+            "Unnamed: 18",
+            "DOB",
+            "state",
+            "tenure",
+            "first_name",
+            "wealth_segment",
+            "address",
+            "Unnamed: 19",
+            "Unnamed: 16"
+          ],
+          "exact_match": null
+        },
+        "meta": {
+          "profiler_details": {
+            "success_ratio": 1.0
+          }
+        }
+      },
+      "meta": {},
+      "result": {
+        "observed_value": [
+          "first_name",
+          "last_name",
+          "gender",
+          "past_3_years_bike_related_purchases",
+          "DOB",
+          "job_title",
+          "job_industry_category",
+          "wealth_segment",
+          "deceased_indicator",
+          "owns_car",
+          "tenure",
+          "address",
+          "postcode",
+          "state",
+          "country",
+          "property_valuation",
+          "Unnamed: 16",
+          "Unnamed: 17",
+          "Unnamed: 18",
+          "Unnamed: 19",
+          "Unnamed: 20",
+          "Rank",
+          "Value"
+        ]
+      },
+      "success": true
+    }
+  ],
+  "statistics": {
+    "evaluated_expectations": 2,
+    "success_percent": 100.0,
+    "successful_expectations": 2,
+    "unsuccessful_expectations": 0
+  },
+  "success": true
+}
