@@ -5,13 +5,12 @@
 
 ## Quick Portral
 
-| **--->** [1.Script]() | 
 
-| **--->** [2.Figma](https://www.figma.com/file/AyMd8FVlz2cA5shKAYW4ij/Streamlit-Design-System-(Community)?node-id=20904%3A1545&t=ITSZwbVloo2mekjk-1) |
+| **--->** [1.Figma](https://www.figma.com/file/AyMd8FVlz2cA5shKAYW4ij/Streamlit-Design-System-(Community)?node-id=20904%3A1545&t=ITSZwbVloo2mekjk-1) |
 
-| **--->** [3.Streamlit](https://dduan-zw-info-7374-dm-project-data-quality-3740hu.streamlit.app/Insight) |
+| **--->** [2.Streamlit](https://dduan-zw-info-7374-dm-project-data-quality-3740hu.streamlit.app/Insight) |
 
-| **--->** [4.CodeLab](https://dduan-zw-info-7374-dm-project-data-quality-3740hu.streamlit.app/Insight) |
+| **--->** [3.CodeLab](https://dduan-zw-info-7374-dm-project-data-quality-3740hu.streamlit.app/Insight) |
 
 | **--->** [4.GreatExpectation](https://dduan-zw-info-7374-dm-project-data-quality-3740hu.streamlit.app/Insight) |
 
