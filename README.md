@@ -8,14 +8,10 @@
 
 | **--->** [1.Figma](https://www.figma.com/file/AyMd8FVlz2cA5shKAYW4ij/Streamlit-Design-System-(Community)?node-id=20904%3A1545&t=ITSZwbVloo2mekjk-1) |
 
-| **--->** [2.Streamlit](https://dduan-zw-info-7374-dm-project-data-quality-3740hu.streamlit.app/Insight) |
+| **--->** [2.Streamlit](https://dduan-zw-info-7374-dm-project-data-quality-3740hu.streamlit.app/Introduction) |
 
-| **--->** [3.CodeLab](https://dduan-zw-info-7374-dm-project-data-quality-3740hu.streamlit.app/Insight) |
+| **--->** [3.CodeLab](https://docs.google.com/document/d/1uQZj-iz8bjMJwHygQVe4_TeIjzr0lxkkMf3wOMDQAd4/edit#heading=h.7sa4zxkhmsum) |
 
-
-##### Figma: https://www.figma.com/file/AyMd8FVlz2cA5shKAYW4ij/Streamlit-Design-System-(Community)?node-id=20904%3A1545&t=ITSZwbVloo2mekjk-1
-##### Streamlit: https://dduan-zw-info-7374-dm-project-data-quality-3740hu.streamlit.app/Insight
-##### CodeLab: https://docs.google.com/document/d/1uQZj-iz8bjMJwHygQVe4_TeIjzr0lxkkMf3wOMDQAd4/edit#heading=h.7sa4zxkhmsum
 
 ## 1.Introduction
 
