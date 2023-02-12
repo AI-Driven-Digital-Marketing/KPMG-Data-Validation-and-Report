@@ -4,7 +4,7 @@
 [![author](https://img.shields.io/badge/Author-Ziwei_Duan-blue.svg)](https://www.linkedin.com/in/ziwei-duan-create/) 
 
 ## Quick Portral
-### Assignment1:
+### Assignment1 :
 | **--->** [1.Figma](https://www.figma.com/file/AyMd8FVlz2cA5shKAYW4ij/Streamlit-Design-System-(Community)?node-id=20904%3A1545&t=ITSZwbVloo2mekjk-1) |
 
 | **--->** [2.Streamlit](https://dduan-zw-info-7374-dm-project-data-quality-3740hu.streamlit.app/Introduction) |
