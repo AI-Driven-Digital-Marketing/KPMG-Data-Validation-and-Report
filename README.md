@@ -12,7 +12,6 @@
 
 | **--->** [3.CodeLab](https://dduan-zw-info-7374-dm-project-data-quality-3740hu.streamlit.app/Insight) |
 
-| **--->** [4.GreatExpectation](https://dduan-zw-info-7374-dm-project-data-quality-3740hu.streamlit.app/Insight) |
 
 ##### Figma: https://www.figma.com/file/AyMd8FVlz2cA5shKAYW4ij/Streamlit-Design-System-(Community)?node-id=20904%3A1545&t=ITSZwbVloo2mekjk-1
 ##### Streamlit: https://dduan-zw-info-7374-dm-project-data-quality-3740hu.streamlit.app/Insight
