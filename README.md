@@ -9,7 +9,10 @@
 | **--->** [2.Website by Streamlit](https://dduan-zw-info-7374-dm-project-data-quality-3740hu.streamlit.app/Introduction) |
 
 | **--->** [3.CodeLab](https://docs.google.com/document/d/1uQZj-iz8bjMJwHygQVe4_TeIjzr0lxkkMf3wOMDQAd4/edit#heading=h.7sa4zxkhmsum) |
-
+### Tech Stack
+- Python
+- Streamlit
+- [ydata-profiling](https://blog.pypi.org/posts/2023-03-21-welcome-to-the-pypi-blog/)
 
 
 ## 1.Introduction
